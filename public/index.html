@@ -15,11 +15,41 @@
       Welcome to ChatRoom 💬
     </h1>
     <div class="flex justify-center">
-      <div class="w-full md:w-150 h-[90vh] bg-gray-900 mx-5 rounded-xl">
+      <div class="w-full md:w-150 h-[82vh] bg-gray-900 mx-5 rounded-xl">
         <div class="p-4 flex rounded-t-xl relative bg-gray-700 w-">
           <i class="fa-solid fa-user text-2xl" style="color: white"></i>
-          <h2 class="text-white text-lg font Bold mx-5">User Name</h2>
+          <h2 class="text-white text-lg font Bold mx-5">Your User Name</h2>
         </div>
+        <div class="bg-black m-2 p-2 rounded-xl w-fit">
+          <h3 class="text-white text-xl">This is the first message</h3>
+          <div class="flex justify-between">
+            <h4 class="text-white text-xs mr-2">12:00 AM</h4>
+            <h4 class="text-white text-xs ml-2">Guest 1</h4>
+          </div>
+        </div>
+        <div class="bg-white m-2 p-2 rounded-xl w-fit ml-auto">
+          <h3 class="text-black text-xl">This is the second message</h3>
+          <div class="flex justify-between">
+            <h4 class="text-black text-xs mr-2">12:01 AM</h4>
+            <h4 class="text-black text-xs ml-2">Guest 2</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div
+        class="flex justify-between text-white bg-gray-700 w-full md:w-150 mx-5 my-2 rounded-xl"
+      >
+        <form class="p-3">
+          <input
+            type="text"
+            placeholder="Enter your Message here"
+            class="w-full p-2 rounded-lg outline-none"
+          />
+        </form>
+        <button class="bg-green-500 p-2 px-5 rounded-xl text-black bg-white">
+          <i class="fa-solid fa-paper-plane text-xl"></i>
+        </button>
       </div>
     </div>
   </body>
