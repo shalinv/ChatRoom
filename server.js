@@ -9,3 +9,20 @@ app.use(express.static(path.join(__dirname, "public")));
 const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+const io = require("socket.io")(server);
+
+io.on("connection", onConnected);
+
+function onConnected(socket) {
+  console.log(socket.id);
+
+  socket.on("disconnect", () => {
+    console.log("Socket Disconnected: ", socket.id);
+  });
+
+  socket.on("message", (data) => {
+    console.log(data);
+    socket.broadcast.emit("chat-message", data);
+  });
+}
