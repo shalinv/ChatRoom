@@ -12,12 +12,24 @@ const server = app.listen(PORT, () => {
 
 const io = require("socket.io")(server);
 
+let users = 0;
+const TIME = 1000 * 60 * 3; //3minutes
+
 io.on("connection", onConnected);
 
 function onConnected(socket) {
   console.log(socket.id);
 
+  if (users == 0) {
+    setTimeout(() => {
+      io.emit("chat:destroyed");
+    }, TIME);
+  }
+
+  users++;
+
   socket.on("disconnect", () => {
+    users--;
     console.log("Socket Disconnected: ", socket.id);
   });
 

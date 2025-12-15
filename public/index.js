@@ -63,3 +63,8 @@ socket.on("chat-message", (data) => {
   console.log("recieved: ", data.content);
   RecievedMessage(data);
 });
+
+socket.on("chat:destroyed", () => {
+  alert("This chat has self-destructed");
+  window.location.reload();
+});
