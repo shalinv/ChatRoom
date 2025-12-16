@@ -20,7 +20,13 @@ No accounts. No history. Just chat.
 - **Frontend:** HTML, Tailwind CSS
 - **Runtime:** JavaScript (ES6+)
 
-## Screenshots
+## 📸 Screenshots
+
+<p>
+  <img src="images/screenshot1.png" alt="Chat Left" width="300" />
+  <img src="images/screenshot2.png" alt="Chat Right" width="300" />
+</p>
+
 
 ## 📦 Installation
 
